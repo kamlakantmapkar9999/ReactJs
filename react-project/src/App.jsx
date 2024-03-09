@@ -2,6 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { CORE_CONCEPTS } from './data.js'
+
 
 const randomText = ['10','12','14'];
 
@@ -27,7 +29,26 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more {randomTextValue}
       </p>
+
+      <section id="core-concepts">
+        <ul>
+        <Component {...CORE_CONCEPTS[0]} />
+        <Component {...CORE_CONCEPTS[1]} />
+        <Component {...CORE_CONCEPTS[2]} />
+        <Component {...CORE_CONCEPTS[3]} />
+        </ul>
+      </section>
     </>
+  )
+}
+
+function Component({title, description}) {
+  return (
+    <li>
+      <img src={reactLogo} />
+      <p>{title}</p>
+      <p>{description}</p>
+    </li>
   )
 }
 

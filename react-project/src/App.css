@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+#core-concepts li img {
+  /* height: 4rem; */
+  /* width: 6rem; */
+  object-fit: cover;
+}
