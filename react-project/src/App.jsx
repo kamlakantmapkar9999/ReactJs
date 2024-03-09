@@ -3,8 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+const randomText = ['10','12','14'];
+
+function genRandomInt(max) {
+  return Math.floor(Math.random() * (max + 1));
+}
+
 function App() {
   const [count, setCount] = useState(5)
+  const randomTextValue = randomText[genRandomInt(2)];
 
   return (
     <>
@@ -18,7 +25,7 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more 16
+        Click on the Vite and React logos to learn more {randomTextValue}
       </p>
     </>
   )
